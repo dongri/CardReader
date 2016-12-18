@@ -18,7 +18,7 @@ public class CardListAdapter extends ArrayAdapter<Card> {
     LayoutInflater mInflater;
 
     public CardListAdapter(Context context) {
-        super(context, 0);  
+        super(context, 0);
         mInflater = LayoutInflater.from(context);
     }
 
@@ -40,10 +40,10 @@ public class CardListAdapter extends ArrayAdapter<Card> {
         tv.setText(card.getDevice());
 
         tv = (TextView) convertView.findViewById(R.id.in);
-        tv.setText("入: " + card.getInStation() + "(" + card.getInLine() + ")");
+        tv.setText("入: " + card.getInStation() + " (" + card.getInLine() + ")");
 
         tv = (TextView) convertView.findViewById(R.id.out);
-        tv.setText("出: " + card.getOutStation() + "(" + card.getOutLine() + ")");
+        tv.setText("出: " + card.getOutStation() + " (" + card.getOutLine() + ")");
 
         tv = (TextView) convertView.findViewById(R.id.balance);
         tv.setText("残高: " + card.getBalance() + "円");
